@@ -1,0 +1,29 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config EXAMPLES_MAP_TEST
+	tristate "map test"
+	default n
+	---help---
+		Enable map test example
+
+if EXAMPLES_MAP_TEST
+
+config EXAMPLES_MAP_TEST_PROGNAME
+	string "Program name"
+	default "map_test"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_MAP_TEST_PRIORITY
+	int "Map test priority"
+	default 100
+
+config EXAMPLES_MAP_TEST_STACKSIZE
+	int "Map test stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif
