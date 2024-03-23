@@ -29,6 +29,9 @@ MODULE    = $(CONFIG_EXAMPLES_MAP_TEST)
 
 # MAP_TEST, World! Example
 
-MAINSRC = map_test.c
+MAINSRC = main.c
+CSRCS = map_lib.c
+
+
 
 include $(APPDIR)/Application.mk
